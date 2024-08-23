@@ -185,7 +185,19 @@ chgrp www-data /var/tmp/sms
 chmod 775 /var/tmp/sms
 ```
 
-## Test send sms via sms-cgi
+## Test send sms
+
+### Using browser
+
+Just input this line into the browser
+
+```
+http://localhost/cgi/sms.cgi?user=user1&pass=password1&to=085236006001&txt=Tes%20kirim%20sms
+```
+
+>When using the browser to send sms the space character must be encoded to `%20`.
+
+### Using curl
 
 Test send sms to single number
 
@@ -223,9 +235,4 @@ The sms file `/var/tmp/sms/sms.1724415565` will contain
 085236006001 tes sms
 085236006002 tes sms
 ```
-
-
-
-
-
 
