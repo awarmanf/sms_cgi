@@ -178,7 +178,7 @@ runlevel = 2<br>
 </body></html>
 ```
 
-## Make user apache can write to /var/tmp/sms
+## Make user nginx (www-data) can write to /var/tmp/sms
 
 ```
 chgrp www-data /var/tmp/sms
