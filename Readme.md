@@ -1,7 +1,7 @@
 
 # SMS Web Application
 
-The SMS Web is a web application to sent sms using Perl CGI. You must setup it on the same SMS Gateway Server.
+The SMS Web is a web application to sent sms using Perl CGI. You must setup it on the same [SMS Gateway Server](https://github.com/awarmanf/sms_gateway_perl).
 
 >This application is designed on Debian Linux (Wheezy).
 
