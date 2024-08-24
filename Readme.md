@@ -9,7 +9,7 @@ The SMS Web is a web application to sent sms using Perl CGI. You must setup it o
 
 Packages installation in Debian / Ubuntu.
 
-```
+```bash
 apt-get install nginx
 apt-get install php-pear
 apt-get install php5-cgi
@@ -37,7 +37,7 @@ $ /etc/init.d/fcgiwrap status
 
 Edit `/etc/nginx/sites-available/default`
 
-```
+```nginx
 server {
 
 	root /usr/share/nginx/www;
@@ -100,7 +100,7 @@ Start nginx
 
 Login to mysql as user root
 
-```
+```sql
 CREATE DATABASE smscgi;
 CREATE USER 'user1'@'localhost' IDENTIFIED BY 'password1';
 GRANT ALL PRIVILEGES ON `smscgi` . * TO 'user1'@'localhost';
@@ -132,8 +132,11 @@ chmod 755 /usr/share/nginx/www/cgi/sms.cgi
 
 Test if cgi is working by using curl
 
-```
-$ curl http://localhost/cgi/test.cgi
+    curl http://localhost/cgi/test.cgi
+
+The output
+
+```html
 <html><head><title>Perl Environment Variables</title></head>
 <body>
 <h1>Perl Environment Variables</h1>
@@ -207,7 +210,7 @@ curl -o output -s "http://localhost/cgi/sms.cgi?user=user1&pass=password1&to=085
 
 If success the output will be
 
-```
+```html
 <!DOCTYPE html
 	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
